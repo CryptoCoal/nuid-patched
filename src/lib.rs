@@ -2,7 +2,7 @@ use rand::{distributions::Alphanumeric, thread_rng, Rng};
 
 const PRE_LEN: usize = 12;
 
-pub fn next_id() -> String {
+pub fn next() -> String {
     let mut rng = thread_rng();
     rng.sample_iter(&Alphanumeric)
         .take(PRE_LEN)
